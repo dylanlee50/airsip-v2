@@ -1,0 +1,24 @@
+#privacyPolicy {
+  margin: 2% 19% 2% 19%;
+  border-style: solid;
+  border-width: thin;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.h3h4 {
+  text-align: center;
+}
+
+p > span,
+ul > li > span {
+  font-weight: bold;
+}
+
+.fontsizeDecrease {
+  font-size: smaller;
+}
+
+.removeBulletPoint {
+  list-style-type: none;
+}

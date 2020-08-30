@@ -1,0 +1,21 @@
+.display-container {
+  min-height: 90vh;
+}
+
+.image {
+  padding-top: 7%;
+  padding-bottom: 2%;
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+}
+
+.signup {
+  text-align: center;
+}
+
+.header {
+  color: rgb(71, 150, 241);
+}
