@@ -4,25 +4,19 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
+import Modal from "react-modal";
+import Contact from "./Contact";
 
-function Navbar() {
+const Navbar = () => {
   const [click, setClick] = useState(false);
-  // const [button, setButton] = useState(true);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-  // const showButton = () => {
-  //   if (window.innerWidth <= 960) {
-  //     setButton(false);
-  //   } else {
-  //     setButton(true);
-  //   }
-  // };
-  // window.addEventListener("resize", showButton);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   return (
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
-        <nav className="navbar">
+        <div className="navbar">
           <div className="navbar-container container">
             <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
               Airsip
@@ -32,20 +26,31 @@ function Navbar() {
             </div>
             <ul className={click ? "nav-menu active" : "nav-menu"}>
               <li className="nav-item">
-                <Link
+                {/* <Link
                   to="/contact"
                   className="nav-links"
                   onClick={closeMobileMenu}
+                > */}
+                <button
+                  onClick={() => setModalIsOpen(true)}
+                  id="contact-button"
                 >
                   Contact
-                </Link>
+                </button>
+                {/* </Link> */}
               </li>
             </ul>
+            <Modal
+              isOpen={modalIsOpen}
+              onRequestClose={() => setModalIsOpen(false)}
+            >
+              <Contact />
+            </Modal>
           </div>
-        </nav>
+        </div>
       </IconContext.Provider>
     </>
   );
-}
+};
 
 export default Navbar;

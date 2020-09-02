@@ -16,6 +16,7 @@ const Footer = () => {
             </ul>
           </div>
           <ul className="col2">
+            <li>Contact</li>
             <li>
               <Link to="/terms_privacy" id="terms_privacy">
                 Terms &amp; Privacy
@@ -23,7 +24,7 @@ const Footer = () => {
             </li>
           </ul>
           <div className="transparent">
-            <h4 >Airsip</h4>
+            <h4>Airsip</h4>
             <ul>
               <li>Video Q&amp;A app for advice</li>
               <li>&#169; 2020 Eddify Co.</li>

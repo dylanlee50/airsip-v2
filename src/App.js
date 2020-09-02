@@ -6,8 +6,11 @@ import DisplayPage from "./components/DisplayPage";
 import Footer from "./components/Footer";
 import TermsPrivacy from "./components/TermsPrivacy";
 import ScrollToTop from "./components/ScrollToTop";
+import Modal from "react-modal";
 
-function App() {
+Modal.setAppElement("#root");
+
+const App = () => {
   return (
     <>
       <Router>
@@ -21,6 +24,6 @@ function App() {
       </Router>
     </>
   );
-}
+};
 
 export default App;
