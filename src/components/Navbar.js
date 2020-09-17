@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { Button } from "./Button";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -26,25 +25,51 @@ const Navbar = () => {
             </div>
             <ul className={click ? "nav-menu active" : "nav-menu"}>
               <li className="nav-item">
-                {/* <Link
-                  to="/contact"
-                  className="nav-links"
-                  onClick={closeMobileMenu}
-                > */}
                 <button
                   onClick={() => setModalIsOpen(true)}
                   id="contact-button"
+                  style={{
+                    backgroundColor: "rgb(0,0,0,0)",
+                    color: "white",
+                    borderWidth: 0,
+                  }}
                 >
                   Contact
                 </button>
-                {/* </Link> */}
               </li>
             </ul>
             <Modal
               isOpen={modalIsOpen}
               onRequestClose={() => setModalIsOpen(false)}
+              style={{
+                overlay: {
+                  position: "fixed",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  backgroundColor: "rgba(0, 0, 0, 0.75)",
+                },
+                content: {
+                  position: "absolute",
+                  top: "20%",
+                  left: "10%",
+                  border: "1px solid #ccc",
+                  background: "#fff",
+                  overflow: "auto",
+                  WebkitOverflowScrolling: "touch",
+                  outline: "none",
+                  padding: "20px",
+                  width: "80%",
+                  height: "55%",
+                  justifyContent: "center",
+                  alignContent: "center",
+                  alignSelf: "center",
+                  textAlign: "center",
+                },
+              }}
             >
-              <Contact />
+              <Contact modalVisible={setModalIsOpen} />
             </Modal>
           </div>
         </div>

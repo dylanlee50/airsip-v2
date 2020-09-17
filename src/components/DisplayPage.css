@@ -18,4 +18,6 @@
 
 .header {
   color: rgb(71, 150, 241);
+  font-size: 40px;
+  font-weight: "bold";
 }
